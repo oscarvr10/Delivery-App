@@ -1,4 +1,4 @@
-import 'package:delivery_app/src/register/register_controller.dart';
+import 'package:delivery_app/src/pages/register/register_controller.dart';
 import 'package:delivery_app/src/utils/my_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
