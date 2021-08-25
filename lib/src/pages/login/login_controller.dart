@@ -1,6 +1,8 @@
 import 'package:delivery_app/src/models/response.dart';
+import 'package:delivery_app/src/models/user.dart';
 import 'package:delivery_app/src/provider/users_provider.dart';
 import 'package:delivery_app/src/utils/custom_snackbar.dart';
+import 'package:delivery_app/src/utils/shared_pref.dart';
 import 'package:flutter/material.dart';
 
 class LoginController{
@@ -9,10 +11,19 @@ class LoginController{
   TextEditingController passwordController = new TextEditingController();
 
   UsersProvider usersProvider = new UsersProvider();
+  SharedPref _prefs = new SharedPref();
 
   Future init(BuildContext context) async{
     this.context = context;
     await usersProvider.init(context);
+    if(await _prefs.contains('user')){
+      User user = User.fromJson(await _prefs.read('user') ?? {});
+      print('Usuario: ${user.toJson()}');
+
+      if(user.sessionToken != null){
+        Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
+      }
+    }
   }
 
   void goToRegisterPage(){
@@ -24,9 +35,15 @@ class LoginController{
     String password = passwordController.text.trim();
 
     Response response = await usersProvider.login(email, password);
-
-    CustomSnackBar.show(context, response.message ?? '');
-
     print('RESPONSE: ${response.toJson()}');
+
+    if(response.success){
+      User user = User.fromJson(response.data);
+      _prefs.save('user', user.toJson());
+      Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
+    }
+    else{
+      CustomSnackBar.show(context, response.message ?? 'Hubo un error al autenticarse. Intenta nuevamente.');
+    }
   }
 }

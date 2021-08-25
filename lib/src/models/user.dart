@@ -10,9 +10,8 @@ class User {
   String name;
   String lastname;
   String phone;
-  String password;
+  String? password;
   String? image;
-  String? isAvailable;
   String? sessionToken;
 
   User({
@@ -21,9 +20,8 @@ class User {
     required this.name,
     required this.lastname,
     required this.phone,
-    required this.password,
+    this.password,
     this.image,
-    this.isAvailable,
     this.sessionToken,
   });
 
