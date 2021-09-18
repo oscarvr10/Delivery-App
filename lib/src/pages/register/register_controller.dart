@@ -59,8 +59,13 @@ class RegisterController{
     );
 
     Response response = await usersProvider.create(user);
-
     CustomSnackBar.show(context, response.message ?? 'El usuario se ha registrado correctamente.');
+
+    if(response.success){
+      Future.delayed(Duration(seconds: 3), (){
+        Navigator.pushReplacementNamed(context, 'login');
+      });
+    }
     print('RESPONSE: ${response.toJson()}');
   }
 }

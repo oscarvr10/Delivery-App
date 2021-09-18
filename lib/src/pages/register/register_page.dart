@@ -40,7 +40,7 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             Positioned(
               child: _iconBack(),
-              top: 51,
+              top: 50,
               left: -5,
             ),
             Container(

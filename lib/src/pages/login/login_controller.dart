@@ -40,7 +40,12 @@ class LoginController{
     if(response.success){
       User user = User.fromJson(response.data);
       _prefs.save('user', user.toJson());
-      Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
+
+      if(user.roles!.length > 1){
+        Navigator.pushNamedAndRemoveUntil(context, 'roles', (route) => false);
+      } else{
+        Navigator.pushNamedAndRemoveUntil(context, user.roles![0].route, (route) => false);
+      }
     }
     else{
       CustomSnackBar.show(context, response.message ?? 'Hubo un error al autenticarse. Intenta nuevamente.');

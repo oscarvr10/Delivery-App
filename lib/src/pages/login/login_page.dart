@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Positioned(
               child: _textLogin(),
-              top: 70,
+              top: 65,
               left: 25,
             ),
             SingleChildScrollView(
