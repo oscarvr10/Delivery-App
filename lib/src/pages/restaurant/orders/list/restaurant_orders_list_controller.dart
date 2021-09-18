@@ -1,7 +1,7 @@
 import 'package:delivery_app/src/utils/shared_pref.dart';
 import 'package:flutter/material.dart';
 
-class ClientProductsListController{
+class RestaurantOrdersListController{
   late BuildContext context;
   SharedPref _prefs = new SharedPref();
   GlobalKey<ScaffoldState> key = new GlobalKey<ScaffoldState>();
