@@ -27,7 +27,7 @@ class _RolesPageState extends State<RolesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Selecciona un Rol'),
+        title: Text('Selecciona un Perfil'),
         backgroundColor: MyColors.primaryColor,
       ),
       body: Center(

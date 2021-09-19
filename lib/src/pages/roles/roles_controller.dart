@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 class RolesController{
   late BuildContext context;
   User? user;
-  SharedPref pref = new SharedPref();
+  SharedPref _prefs = new SharedPref();
 
   late Function refresh;
 
   Future init(BuildContext context, Function refresh) async{
     this.context = context;
     this.refresh = refresh;
-    user = User.fromJson(await pref.read('user'));
+    user = User.fromJson(await _prefs.read('user'));
     refresh();
   }
 
