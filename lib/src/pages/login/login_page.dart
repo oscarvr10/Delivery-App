@@ -100,23 +100,6 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _bannerImage({required BuildContext context}) {
-    return Container(
-      margin: EdgeInsets.only(
-        top: 180,
-        bottom: MediaQuery
-            .of(context)
-            .size
-            .height * 0.16,
-      ),
-      child: Image.asset(
-          "assets/img/delivery.png",
-          width: 200,
-          height: 200
-      ),
-    );
-  }
-
   Widget _emailTextField() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 50, vertical: 6),

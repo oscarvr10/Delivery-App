@@ -19,10 +19,6 @@ class UsersProvider {
     try{
       Uri url = Uri.http(_url, '$_api/create');
       String params = json.encode(user);
-      Map<String, String> headers = {
-        'Content-Type': 'application/json'
-      };
-
       return _sendRequestAsync(url, params);
     }
     catch(e){
