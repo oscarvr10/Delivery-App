@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "765253891288",
+    "project_id": "delivery-app-17a9f",
+    "storage_bucket": "delivery-app-17a9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765253891288:android:c49617e2d88326734453ad",
+        "android_client_info": {
+          "package_name": "com.ronalverey.delivery_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765253891288-63hekg61988r1p95e2a187d6nr2f1dma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ronalverey.delivery_app",
+            "certificate_hash": "b73e1bc8ab29d5ab383decba72b443f906e74444"
+          }
+        },
+        {
+          "client_id": "765253891288-itclho54rja33rbi7pfbgorff8j1p3ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLy-wFw6ZJ4yaj7b1Sp4fiZ0i1CHN2HR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765253891288-itclho54rja33rbi7pfbgorff8j1p3ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
