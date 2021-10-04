@@ -1,4 +1,4 @@
-package com.ronalverey.deliveryapp.delivery_app
+package com.ronalverey.delivery_app
 
 import io.flutter.embedding.android.FlutterActivity
 
